@@ -1,8 +1,8 @@
 import UIKit
-import NetworkKit
 
-class ViewController: UIViewController {
-    private let networker = NetworkKit()
+
+class ViewController: UIViewController, JokeViewOutput {
+    private let viewModel: JokeViewModel
     
     private lazy var jokeText: UILabel = {
         let label = UILabel()
@@ -13,20 +13,42 @@ class ViewController: UIViewController {
         return label
     }()
 
+    init(viewModel: JokeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.setOutput(output: self)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let views = ["jokeText": jokeText]
-        view.addSubview(jokeText)
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[jokeText]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-
-        let topConstraint = NSLayoutConstraint(item: jokeText, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0)
-        view.addConstraint(topConstraint)
-        networker.load(resource: Joke.resource()) { joke, error in
-            DispatchQueue.main.async(execute: { [weak self] in
-                self?.jokeText.text = joke?.description.htmlDecode()
-            })
-            
-        }
+        view.backgroundColor = UIColor.white
+        setupViews()
+        applyViewConstraints()
+        viewModel.loadJoke()
     }
+    
+    //MARK: JokeViewOutput
+    
+    func show(joke: String) {
+        jokeText.text = joke
+    }
+    
+    private func setupViews() {
+        view.addSubview(jokeText)
+    }
+    
+    private func applyViewConstraints() {
+        let views = ["jokeText": jokeText]
+        
+        let topConstraint = NSLayoutConstraint(item: jokeText, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[jokeText]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        view.addConstraints(horizontalConstraints)
+        view.addConstraint(topConstraint)
+    }
+
 }
 
