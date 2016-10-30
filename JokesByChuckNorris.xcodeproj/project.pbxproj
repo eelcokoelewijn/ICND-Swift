@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A35F10921DC68D91002E051E /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_NetworkKit" /* NetworkKit.framework */; };
+		A35F10931DC68D91002E051E /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_NetworkKit" /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A35F10971DC68D9A002E051E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10721DC68BA0002E051E /* AppDelegate.swift */; };
+		A35F10991DC68DA1002E051E /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10771DC68BA0002E051E /* JokeViewModel.swift */; };
+		A35F109A1DC68DA4002E051E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10781DC68BA0002E051E /* ViewController.swift */; };
+		A35F109C1DC68DB3002E051E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35F10731DC68BA0002E051E /* Assets.xcassets */; };
+		A35F109D1DC68DF9002E051E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Joke.swift /* Joke.swift */; };
+		A35F109E1DC68E03002E051E /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */; };
+		_LinkFileRef_NetworkKit_via_JokesByChuckNorris /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_NetworkKit" /* NetworkKit.framework */; };
+		"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift */; };
+		"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift */; };
+		"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift */; };
+		"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift */; };
+		__src_cc_ref_Sources/Joke.swift /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Joke.swift /* Joke.swift */; };
+		"__src_cc_ref_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */; };
+		__src_cc_ref_Sources/main.swift /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/main.swift /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A35F10701DC68B5A002E051E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_NetworkKit";
+			remoteInfo = NetworkKit;
+		};
+		A35F10941DC68D91002E051E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_NetworkKit";
+			remoteInfo = NetworkKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A35F10961DC68D91002E051E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A35F10931DC68D91002E051E /* NetworkKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A35F10721DC68BA0002E051E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A35F10731DC68BA0002E051E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A35F10761DC68BA0002E051E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A35F10771DC68BA0002E051E /* JokeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		A35F10781DC68BA0002E051E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A35F10801DC68D18002E051E /* ChucksJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChucksJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		__PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Joke.swift /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecode.swift"; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
+		"_____Product_JokesByChuckNorris" /* JokesByChuckNorris */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = JokesByChuckNorris; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_NetworkKit" /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A35F107D1DC68D18002E051E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35F10921DC68D91002E051E /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_JokesByChuckNorris" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_NetworkKit_via_JokesByChuckNorris /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_NetworkKit" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A35F10711DC68BA0002E051E /* ChucksJokesApp */ = {
+			isa = PBXGroup;
+			children = (
+				A35F10721DC68BA0002E051E /* AppDelegate.swift */,
+				A35F10731DC68BA0002E051E /* Assets.xcassets */,
+				A35F10761DC68BA0002E051E /* Info.plist */,
+				A35F10771DC68BA0002E051E /* JokeViewModel.swift */,
+				A35F10781DC68BA0002E051E /* ViewController.swift */,
+			);
+			name = ChucksJokesApp;
+			path = ChucksJokes;
+			sourceTree = "<group>";
+		};
+		Dependencies_ /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_NetworkKit" /* NetworkKit */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				A35F10711DC68BA0002E051E /* ChucksJokesApp */,
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Configs_" /* Configs */,
+				"_____Sources_" /* Sources */,
+				__PBXFileRef_Tests /* Tests */,
+				Dependencies_ /* Dependencies */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_NetworkKit" /* NetworkKit.framework */,
+				"_____Product_JokesByChuckNorris" /* JokesByChuckNorris */,
+				A35F10801DC68D18002E051E /* ChucksJokes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Configs_" /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_JokesByChuckNorris" /* JokesByChuckNorris */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_JokesByChuckNorris" /* JokesByChuckNorris */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/Joke.swift /* Joke.swift */,
+				__PBXFileRef_Sources/main.swift /* main.swift */,
+				"__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */,
+			);
+			name = JokesByChuckNorris;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_NetworkKit" /* NetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift */,
+				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift */,
+				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift */,
+				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift */,
+			);
+			name = NetworkKit;
+			path = "Packages/NetworkKit-1.0.3/Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A35F107F1DC68D18002E051E /* ChucksJokes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A35F108F1DC68D18002E051E /* Build configuration list for PBXNativeTarget "ChucksJokes" */;
+			buildPhases = (
+				A35F107C1DC68D18002E051E /* Sources */,
+				A35F107D1DC68D18002E051E /* Frameworks */,
+				A35F107E1DC68D18002E051E /* Resources */,
+				A35F10961DC68D91002E051E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A35F10951DC68D91002E051E /* PBXTargetDependency */,
+			);
+			name = ChucksJokes;
+			productName = ChucksJokes;
+			productReference = A35F10801DC68D18002E051E /* ChucksJokes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		"______Target_JokesByChuckNorris" /* JokesByChuckNorris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_JokesByChuckNorris" /* Build configuration list for PBXNativeTarget "JokesByChuckNorris" */;
+			buildPhases = (
+				CompilePhase_JokesByChuckNorris /* Sources */,
+				"___LinkPhase_JokesByChuckNorris" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_NetworkKit /* PBXTargetDependency */,
+			);
+			name = JokesByChuckNorris;
+			productName = JokesByChuckNorris;
+			productReference = "_____Product_JokesByChuckNorris" /* JokesByChuckNorris */;
+			productType = "com.apple.product-type.tool";
+		};
+		"______Target_NetworkKit" /* NetworkKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_NetworkKit" /* Build configuration list for PBXNativeTarget "NetworkKit" */;
+			buildPhases = (
+				CompilePhase_NetworkKit /* Sources */,
+				"___LinkPhase_NetworkKit" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkKit;
+			productName = NetworkKit;
+			productReference = "_____Product_NetworkKit" /* NetworkKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					A35F107F1DC68D18002E051E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "JokesByChuckNorris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_NetworkKit" /* NetworkKit */,
+				"______Target_JokesByChuckNorris" /* JokesByChuckNorris */,
+				A35F107F1DC68D18002E051E /* ChucksJokes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A35F107E1DC68D18002E051E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35F109C1DC68DB3002E051E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A35F107C1DC68D18002E051E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35F109A1DC68DA4002E051E /* ViewController.swift in Sources */,
+				A35F10971DC68D9A002E051E /* AppDelegate.swift in Sources */,
+				A35F109D1DC68DF9002E051E /* Joke.swift in Sources */,
+				A35F10991DC68DA1002E051E /* JokeViewModel.swift in Sources */,
+				A35F109E1DC68E03002E051E /* String+HTMLDecode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_JokesByChuckNorris /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Sources/Joke.swift /* Joke.swift in Sources */,
+				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
+				"__src_cc_ref_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_NetworkKit /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift in Sources */,
+				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift in Sources */,
+				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift in Sources */,
+				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A35F10951DC68D91002E051E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_NetworkKit" /* NetworkKit */;
+			targetProxy = A35F10941DC68D91002E051E /* PBXContainerItemProxy */;
+		};
+		__Dependency_NetworkKit /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_NetworkKit" /* NetworkKit */;
+			targetProxy = A35F10701DC68B5A002E051E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A35F10901DC68D18002E051E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ChucksJokes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.eelcokoelewijn.ChucksJokes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A35F10911DC68D18002E051E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ChucksJokes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.eelcokoelewijn.ChucksJokes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		_ReleaseConf_JokesByChuckNorris /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		_ReleaseConf_NetworkKit /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = JokesByChuckNorris.xcodeproj/NetworkKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NetworkKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		"___DebugConf_JokesByChuckNorris" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"___DebugConf_NetworkKit" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				INFOPLIST_FILE = JokesByChuckNorris.xcodeproj/NetworkKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NetworkKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A35F108F1DC68D18002E051E /* Build configuration list for PBXNativeTarget "ChucksJokes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A35F10901DC68D18002E051E /* Debug */,
+				A35F10911DC68D18002E051E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		"___RootConfs_" /* Build configuration list for PBXProject "JokesByChuckNorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_JokesByChuckNorris" /* Build configuration list for PBXNativeTarget "JokesByChuckNorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_JokesByChuckNorris" /* Debug */,
+				_ReleaseConf_JokesByChuckNorris /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_NetworkKit" /* Build configuration list for PBXNativeTarget "NetworkKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_NetworkKit" /* Debug */,
+				_ReleaseConf_NetworkKit /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}
