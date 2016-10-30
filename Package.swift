@@ -3,6 +3,6 @@ import PackageDescription
 let package = Package(
     name: "JokesByChuckNorris",
     dependencies: [
-        .Package(url: "../NetworkKit", "1.0.2"),
+        .Package(url: "https://github.com/eelcokoelewijn/NetworkKit.git", "1.0.3"),
     ]
 )
