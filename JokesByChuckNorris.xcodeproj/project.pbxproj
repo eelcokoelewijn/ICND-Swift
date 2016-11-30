@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A333B8BF1DEF5AB8009A13CD /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8BC1DEF5AB8009A13CD /* ContentType.swift */; };
+		A333B8C01DEF5AB8009A13CD /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8BD1DEF5AB8009A13CD /* Header.swift */; };
+		A333B8C11DEF5AB8009A13CD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8BE1DEF5AB8009A13CD /* Response.swift */; };
+		A333B8C61DEF5C97009A13CD /* ICNDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8C41DEF5C97009A13CD /* ICNDBService.swift */; };
+		A333B8C71DEF5C97009A13CD /* ICNDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8C41DEF5C97009A13CD /* ICNDBService.swift */; };
+		A333B8CD1DEF6388009A13CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8CB1DEF6388009A13CD /* NetworkService.swift */; };
+		A333B8CE1DEF6388009A13CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B8CB1DEF6388009A13CD /* NetworkService.swift */; };
+		A333B8D31DEF69A8009A13CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10721DC68BA0002E051E /* AppDelegate.swift */; };
+		A333B8D41DEF69CE009A13CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10781DC68BA0002E051E /* ViewController.swift */; };
 		A35F10921DC68D91002E051E /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_NetworkKit" /* NetworkKit.framework */; };
 		A35F10931DC68D91002E051E /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_NetworkKit" /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A35F10971DC68D9A002E051E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10721DC68BA0002E051E /* AppDelegate.swift */; };
 		A35F10991DC68DA1002E051E /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10771DC68BA0002E051E /* JokeViewModel.swift */; };
-		A35F109A1DC68DA4002E051E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F10781DC68BA0002E051E /* ViewController.swift */; };
 		A35F109C1DC68DB3002E051E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35F10731DC68BA0002E051E /* Assets.xcassets */; };
 		A35F109D1DC68DF9002E051E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Joke.swift /* Joke.swift */; };
 		A35F109E1DC68E03002E051E /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */; };
@@ -57,6 +64,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A333B8BC1DEF5AB8009A13CD /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		A333B8BD1DEF5AB8009A13CD /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		A333B8BE1DEF5AB8009A13CD /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		A333B8C41DEF5C97009A13CD /* ICNDBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICNDBService.swift; sourceTree = "<group>"; };
+		A333B8CB1DEF6388009A13CD /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A333B8D11DEF6983009A13CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A35F10721DC68BA0002E051E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A35F10731DC68BA0002E051E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35F10761DC68BA0002E051E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +82,7 @@
 		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/Joke.swift /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Joke.swift /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Joke.swift; path = Sources/Joke.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecode.swift"; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
@@ -104,6 +117,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A333B8C21DEF5C56009A13CD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A333B8CA1DEF6359009A13CD /* Network */,
+				A333B8C31DEF5C5C009A13CD /* ICNDB */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A333B8C31DEF5C5C009A13CD /* ICNDB */ = {
+			isa = PBXGroup;
+			children = (
+				A333B8C41DEF5C97009A13CD /* ICNDBService.swift */,
+			);
+			name = ICNDB;
+			sourceTree = "<group>";
+		};
+		A333B8C81DEF5FEB009A13CD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A333B8C91DEF5FF6009A13CD /* ICNDB */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		A333B8C91DEF5FF6009A13CD /* ICNDB */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/Joke.swift /* Joke.swift */,
+			);
+			name = ICNDB;
+			sourceTree = "<group>";
+		};
+		A333B8CA1DEF6359009A13CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A333B8CB1DEF6388009A13CD /* NetworkService.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		A333B8D01DEF6983009A13CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A333B8D11DEF6983009A13CD /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A35F10711DC68BA0002E051E /* ChucksJokesApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +190,8 @@
 		"___RootGroup_" = {
 			isa = PBXGroup;
 			children = (
+				A333B8C81DEF5FEB009A13CD /* Entities */,
+				A333B8C21DEF5C56009A13CD /* Services */,
 				A35F10711DC68BA0002E051E /* ChucksJokesApp */,
 				__PBXFileRef_Package.swift /* Package.swift */,
 				"_____Configs_" /* Configs */,
@@ -135,6 +199,7 @@
 				__PBXFileRef_Tests /* Tests */,
 				Dependencies_ /* Dependencies */,
 				"____Products_" /* Products */,
+				A333B8D01DEF6983009A13CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,7 +232,6 @@
 		"_______Group_JokesByChuckNorris" /* JokesByChuckNorris */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Sources/Joke.swift /* Joke.swift */,
 				__PBXFileRef_Sources/main.swift /* main.swift */,
 				"__PBXFileRef_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift */,
 			);
@@ -178,13 +242,16 @@
 		"_______Group_NetworkKit" /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				A333B8BC1DEF5AB8009A13CD /* ContentType.swift */,
+				A333B8BD1DEF5AB8009A13CD /* Header.swift */,
+				A333B8BE1DEF5AB8009A13CD /* Response.swift */,
 				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift */,
 				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift */,
 				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift */,
 				"__PBXFileRef_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift */,
 			);
 			name = NetworkKit;
-			path = "Packages/NetworkKit-1.0.3/Sources";
+			path = "Packages/NetworkKit-1.0.4/Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +316,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 9999;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					A35F107F1DC68D18002E051E = {
 						CreatedOnToolsVersion = 8.0;
@@ -293,11 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A35F109A1DC68DA4002E051E /* ViewController.swift in Sources */,
-				A35F10971DC68D9A002E051E /* AppDelegate.swift in Sources */,
+				A333B8C71DEF5C97009A13CD /* ICNDBService.swift in Sources */,
 				A35F109D1DC68DF9002E051E /* Joke.swift in Sources */,
 				A35F10991DC68DA1002E051E /* JokeViewModel.swift in Sources */,
+				A333B8D31DEF69A8009A13CD /* AppDelegate.swift in Sources */,
+				A333B8D41DEF69CE009A13CD /* ViewController.swift in Sources */,
 				A35F109E1DC68E03002E051E /* String+HTMLDecode.swift in Sources */,
+				A333B8CE1DEF6388009A13CD /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +374,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A333B8CD1DEF6388009A13CD /* NetworkService.swift in Sources */,
 				__src_cc_ref_Sources/Joke.swift /* Joke.swift in Sources */,
 				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
+				A333B8C61DEF5C97009A13CD /* ICNDBService.swift in Sources */,
 				"__src_cc_ref_Sources/String+HTMLDecode.swift" /* String+HTMLDecode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,10 +386,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A333B8BF1DEF5AB8009A13CD /* ContentType.swift in Sources */,
 				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/NetworkKit.swift" /* NetworkKit.swift in Sources */,
 				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Request.swift" /* Request.swift in Sources */,
 				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/RequestMethod.swift" /* RequestMethod.swift in Sources */,
+				A333B8C01DEF5AB8009A13CD /* Header.swift in Sources */,
 				"__src_cc_ref_Packages/NetworkKit-1.0.3/Sources/Resource.swift" /* Resource.swift in Sources */,
+				A333B8C11DEF5AB8009A13CD /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +455,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ChucksJokes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -432,7 +506,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ChucksJokes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.eelcokoelewijn.ChucksJokes;
@@ -509,6 +583,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -516,6 +608,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig /* JokesByChuckNorris.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -529,6 +640,7 @@
 				A35F10911DC68D18002E051E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		"___RootConfs_" /* Build configuration list for PBXProject "JokesByChuckNorris" */ = {
 			isa = XCConfigurationList;

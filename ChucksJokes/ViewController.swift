@@ -1,8 +1,9 @@
 import UIKit
 
-
-class ViewController: UIViewController, JokeViewOutput {
-    private let viewModel: JokeViewModel
+class ViewController: UIViewController,
+                      UsesJokeViewModel,
+                      JokeViewOutput {
+    internal let jokeViewModel: JokeViewModel
     
     private lazy var jokeText: UILabel = {
         let label = UILabel()
@@ -14,9 +15,9 @@ class ViewController: UIViewController, JokeViewOutput {
     }()
 
     init(viewModel: JokeViewModel) {
-        self.viewModel = viewModel
+        jokeViewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        self.viewModel.setOutput(output: self)
+        jokeViewModel.setOutput(output: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +29,7 @@ class ViewController: UIViewController, JokeViewOutput {
         view.backgroundColor = UIColor.white
         setupViews()
         applyViewConstraints()
-        viewModel.loadJoke()
+        jokeViewModel.loadJoke()
     }
     
     //MARK: JokeViewOutput
@@ -44,8 +45,8 @@ class ViewController: UIViewController, JokeViewOutput {
     private func applyViewConstraints() {
         let views = ["jokeText": jokeText]
         
-        let topConstraint = NSLayoutConstraint(item: jokeText, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0)
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[jokeText]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        let topConstraint = NSLayoutConstraint(item: jokeText, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1, constant: 10)
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[jokeText]-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         view.addConstraints(horizontalConstraints)
         view.addConstraint(topConstraint)
     }
