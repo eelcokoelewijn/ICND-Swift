@@ -16,7 +16,7 @@ class MixInNetworkService: NetworkService {
     private let networkKit: NetworkKit
     
     init() {
-        baseURL = URL(string: "https://api.icndb.com/jokes/random")!
+        baseURL = URL(string: "https://api.icndb.com/")!
         networkKit = NetworkKit()
     }
     

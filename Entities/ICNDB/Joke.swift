@@ -10,15 +10,11 @@ struct Joke {
 
 extension Joke {
     init(json: JSONDictionary) throws {
-        guard let joke = json["value"] as? JSONDictionary else {
-            throw SerializationError.missing("value")
-        }
-    
-        guard let id = joke["id"] as? Int else {
+        guard let id = json["id"] as? Int else {
             throw SerializationError.missing("id")
         }
     
-        guard let description = joke["joke"] as? String else {
+        guard let description = json["joke"] as? String else {
             throw SerializationError.missing("joke")
         }
     
