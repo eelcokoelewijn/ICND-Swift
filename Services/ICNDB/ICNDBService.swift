@@ -36,8 +36,7 @@ class MixInICNDBService: ICNDBService {
             return try? Joke.init(json: joke)
         })
         networkService.load(resource: resource) { r in
-            guard case let .Success(ojoke) = r else { return }
-            guard let joke = ojoke else { return }
+            guard case let .success(joke) = r else { return }
             completion(joke.description.htmlDecode())
         }
     }
@@ -53,8 +52,7 @@ class MixInICNDBService: ICNDBService {
             })
         }
         networkService.load(resource: resource) { r in
-            guard case let .Success(ojokes) = r else { return }
-            guard let jokes = ojokes else { return }
+            guard case let .success(jokes) = r else { return }
             let texts: [String] = jokes.map { joke in joke.description.htmlDecode() }
             completion(texts)
         }
@@ -71,8 +69,7 @@ class MixInICNDBService: ICNDBService {
             })
         }
         networkService.load(resource: resource) { r in
-            guard case let .Success(ocategories) = r else { return }
-            guard let categories = ocategories else { return }
+            guard case let .success(categories) = r else { return }
             completion(categories)
         }
     }
