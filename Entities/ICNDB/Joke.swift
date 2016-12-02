@@ -30,7 +30,8 @@ extension Joke {
         let request = Request(url: URL(string: "https://api.icndb.com/jokes/random")!)
         return Resource<Joke>(request: request) { json in
             guard let dic = json as? JSONDictionary else { return nil }
-            return try? Joke.init(json: dic)
+            guard let jokeJSON = dic["value"] as? JSONDictionary else { return nil }
+            return try? Joke.init(json: jokeJSON)
         }
     }
 }

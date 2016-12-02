@@ -1,7 +1,7 @@
 import Foundation
 import NetworkKit
 
-protocol JokeViewModel: UsesNetworkService {
+protocol JokeViewModel: UsesICNDBService {
     func setOutput(output: JokeViewOutput)
     func loadJoke()
 }
@@ -19,11 +19,11 @@ protocol UsesJokeViewOutput {
 }
 
 class MixInJokeViewModel: JokeViewModel, UsesJokeViewOutput {
-    internal let networkService: NetworkService
+    internal let icndbService: ICNDBService
     internal weak var output: JokeViewOutput!
     
     init() {
-        networkService = MixInNetworkService()
+        icndbService = MixInICNDBService()
     }
     
     func setOutput(output: JokeViewOutput) {
@@ -31,11 +31,10 @@ class MixInJokeViewModel: JokeViewModel, UsesJokeViewOutput {
     }
     
     func loadJoke() {
-        networkService.load(resource: Joke.resource()) { joke, error in
+        icndbService.getRandomJoke(substituteFirstname: nil, substituteLastname: nil) { joke in
             DispatchQueue.main.async(execute: { [weak self] in
-                guard let joke = joke else { return }
-                self?.output.show(joke: joke.description.htmlDecode())
-            })
+                self?.output.show(joke: joke)
+            })                
         }
     }
 }
