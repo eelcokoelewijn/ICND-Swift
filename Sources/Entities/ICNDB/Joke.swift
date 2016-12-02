@@ -1,7 +1,7 @@
 import Foundation
 import NetworkKit
 
-struct Joke {
+public struct Joke {
     let id: Int
     let description: String
 }
@@ -9,7 +9,7 @@ struct Joke {
 //MARK: Parse json response to Joke struct
 
 extension Joke {
-    init(json: JSONDictionary) throws {
+    public init(json: JSONDictionary) throws {
         guard let id = json["id"] as? Int else {
             throw SerializationError.missing("id")
         }
@@ -26,7 +26,7 @@ extension Joke {
 //MARK: Resource for Joke
 
 extension Joke {
-    static func resource() -> Resource<Joke> {
+    public static func resource() -> Resource<Joke> {
         let request = Request(url: URL(string: "https://api.icndb.com/jokes/random")!)
         return Resource<Joke>(request: request) { json in
             guard let dic = json as? JSONDictionary else { return nil }
