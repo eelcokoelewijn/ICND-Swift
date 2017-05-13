@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A310AA7E1EC77B06000932D7 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA771EC77B06000932D7 /* ContentType.swift */; };
+		A310AA7F1EC77B06000932D7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA781EC77B06000932D7 /* Header.swift */; };
+		A310AA801EC77B06000932D7 /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA791EC77B06000932D7 /* NetworkKit.swift */; };
+		A310AA811EC77B06000932D7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA7A1EC77B06000932D7 /* Request.swift */; };
+		A310AA821EC77B06000932D7 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA7B1EC77B06000932D7 /* RequestMethod.swift */; };
+		A310AA831EC77B06000932D7 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA7C1EC77B06000932D7 /* Resource.swift */; };
+		A310AA841EC77B06000932D7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A310AA7D1EC77B06000932D7 /* Response.swift */; };
 		A36692E71DF4C79700CE0C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CAEC161DF4C63F006AB5D6 /* AppDelegate.swift */; };
 		A36692E81DF4C79A00CE0C2D /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CAEC171DF4C63F006AB5D6 /* JokeViewModel.swift */; };
 		A36692E91DF4C79E00CE0C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CAEC181DF4C63F006AB5D6 /* ViewController.swift */; };
@@ -14,13 +21,6 @@
 		A3CAEC041DF4C528006AB5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CAEC021DF4C528006AB5D6 /* LaunchScreen.storyboard */; };
 		A3CAEC141DF4C61E006AB5D6 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* App.framework */; };
 		A3CAEC151DF4C61E006AB5D6 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* NetworkKit.framework */; };
-		OBJ_40 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ContentType.swift */; };
-		OBJ_41 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Header.swift */; };
-		OBJ_42 /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NetworkKit.swift */; };
-		OBJ_43 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Request.swift */; };
-		OBJ_44 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* RequestMethod.swift */; };
-		OBJ_45 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Resource.swift */; };
-		OBJ_46 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Response.swift */; };
 		OBJ_53 /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* String+HTMLDecode.swift */; };
 		OBJ_54 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Joke.swift */; };
 		OBJ_55 /* ICNDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ICNDBService.swift */; };
@@ -56,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A310AA771EC77B06000932D7 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/ContentType.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA781EC77B06000932D7 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Header.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/Header.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA791EC77B06000932D7 /* NetworkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkKit.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/NetworkKit.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA7A1EC77B06000932D7 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/Request.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA7B1EC77B06000932D7 /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestMethod.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/RequestMethod.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA7C1EC77B06000932D7 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/Resource.swift"; sourceTree = SOURCE_ROOT; };
+		A310AA7D1EC77B06000932D7 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = ".build/checkouts/NetworkKit.git-2411900287152938172/Sources/Response.swift"; sourceTree = SOURCE_ROOT; };
 		A3CAEBF71DF4C528006AB5D6 /* ICNDBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICNDBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CAEC001DF4C528006AB5D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3CAEC031DF4C528006AB5D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,12 +70,6 @@
 		A3CAEC161DF4C63F006AB5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CAEC171DF4C63F006AB5D6 /* JokeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		A3CAEC181DF4C63F006AB5D6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		OBJ_10 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		OBJ_11 /* NetworkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_13 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		OBJ_15 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		OBJ_18 /* String+HTMLDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecode.swift"; sourceTree = "<group>"; };
 		OBJ_21 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		OBJ_24 /* ICNDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNDBService.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		OBJ_33 /* App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_34 /* CLI */ = {isa = PBXFileReference; lastKnownFileType = text; path = CLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A310AA761EC77AEA000932D7 /* NetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				A310AA771EC77B06000932D7 /* ContentType.swift */,
+				A310AA781EC77B06000932D7 /* Header.swift */,
+				A310AA791EC77B06000932D7 /* NetworkKit.swift */,
+				A310AA7A1EC77B06000932D7 /* Request.swift */,
+				A310AA7B1EC77B06000932D7 /* RequestMethod.swift */,
+				A310AA7C1EC77B06000932D7 /* Resource.swift */,
+				A310AA7D1EC77B06000932D7 /* Response.swift */,
+			);
+			name = NetworkKit;
+			sourceTree = "<group>";
+		};
 		A3CAEBF81DF4C528006AB5D6 /* ICNDBApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,27 +246,12 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* NetworkKit */,
+				A310AA761EC77AEA000932D7 /* NetworkKit */,
 				OBJ_16 /* App */,
 				OBJ_27 /* CLI */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
-		};
-		OBJ_8 /* NetworkKit */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* ContentType.swift */,
-				OBJ_10 /* Header.swift */,
-				OBJ_11 /* NetworkKit.swift */,
-				OBJ_12 /* Request.swift */,
-				OBJ_13 /* RequestMethod.swift */,
-				OBJ_14 /* Resource.swift */,
-				OBJ_15 /* Response.swift */,
-			);
-			name = NetworkKit;
-			path = "Packages/NetworkKit-1.0.5/Sources";
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -341,6 +340,9 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
+					OBJ_35 = {
+						LastSwiftMigration = 0830;
+					};
 				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "ICNDB" */;
@@ -422,13 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_40 /* ContentType.swift in Sources */,
-				OBJ_41 /* Header.swift in Sources */,
-				OBJ_42 /* NetworkKit.swift in Sources */,
-				OBJ_43 /* Request.swift in Sources */,
-				OBJ_44 /* RequestMethod.swift in Sources */,
-				OBJ_45 /* Resource.swift in Sources */,
-				OBJ_46 /* Response.swift in Sources */,
+				A310AA7F1EC77B06000932D7 /* Header.swift in Sources */,
+				A310AA811EC77B06000932D7 /* Request.swift in Sources */,
+				A310AA7E1EC77B06000932D7 /* ContentType.swift in Sources */,
+				A310AA831EC77B06000932D7 /* Resource.swift in Sources */,
+				A310AA821EC77B06000932D7 /* RequestMethod.swift in Sources */,
+				A310AA801EC77B06000932D7 /* NetworkKit.swift in Sources */,
+				A310AA841EC77B06000932D7 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +626,8 @@
 		OBJ_37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				HEADER_SEARCH_PATHS = "";
@@ -636,6 +640,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGET_NAME = NetworkKit;
 			};
@@ -644,6 +649,8 @@
 		OBJ_38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				HEADER_SEARCH_PATHS = "";

@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "NetworkKit",
+      "reason": null,
+      "repositoryURL": "https://github.com/eelcokoelewijn/NetworkKit.git",
+      "version": "1.0.8"
+    }
+  ],
+  "version": 1
+}

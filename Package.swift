@@ -6,6 +6,7 @@ let package = Package(
         Target(name: "CLI", dependencies: [.Target(name:"App")])
     ],
     dependencies: [
-        .Package(url: "https://github.com/eelcokoelewijn/NetworkKit.git", "1.0.5")
+        .Package(url: "https://github.com/eelcokoelewijn/NetworkKit.git",
+                 versions: Version(1, 0, 0)..<Version(2, 0, 0))
     ]
 )
