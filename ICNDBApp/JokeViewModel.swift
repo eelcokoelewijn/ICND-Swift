@@ -22,20 +22,20 @@ protocol UsesJokeViewOutput {
 class MixInJokeViewModel: JokeViewModel, UsesJokeViewOutput {
     internal let icndbService: ICNDBService
     internal weak var output: JokeViewOutput!
-    
+
     init() {
         icndbService = MixInICNDBService()
     }
-    
+
     func setOutput(output: JokeViewOutput) {
         self.output = output
     }
-    
+
     func loadJoke() {
         icndbService.getRandomJoke(substituteFirstname: nil, substituteLastname: nil) { joke in
             DispatchQueue.main.async(execute: { [weak self] in
                 self?.output.show(joke: joke)
-            })                
+            })
         }
     }
 }

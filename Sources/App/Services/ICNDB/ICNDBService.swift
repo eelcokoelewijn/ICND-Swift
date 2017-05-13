@@ -4,9 +4,9 @@ import NetworkKit
 public protocol ICNDBService: UsesNetworkService {
     func getRandomJoke(substituteFirstname firstName: String?,
                        substituteLastname lastName: String?,
-                       completion: @escaping (String) -> ())
-    func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> ())
-    func getJokeCategories(completion: @escaping ([String])->())
+                       completion: @escaping (String) -> Void)
+    func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> Void)
+    func getJokeCategories(completion: @escaping ([String]) -> Void)
 }
 
 public protocol UsesICNDBService {
@@ -15,14 +15,14 @@ public protocol UsesICNDBService {
 
 public class MixInICNDBService: ICNDBService {
     public let networkService: NetworkService
-    
+
     public init() {
         networkService = MixInNetworkService()
     }
-    
+
     public func getRandomJoke(substituteFirstname firstName: String? = nil,
-                       substituteLastname lastName: String? = nil,
-                       completion: @escaping ((String) -> ()) ) {
+                              substituteLastname lastName: String? = nil,
+                              completion: @escaping ((String) -> Void) ) {
         let url = networkService.baseURL.appendingPathComponent("jokes/random")
         var params: [String: String] = [:]
         if let firstName = firstName, let lastName = lastName {
@@ -40,8 +40,8 @@ public class MixInICNDBService: ICNDBService {
             completion(joke.description.htmlDecode())
         }
     }
-    
-    public func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> ()) {
+
+    public func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> Void) {
         let url = networkService.baseURL.appendingPathComponent("jokes/random/\(number)")
         let request = Request(url: url)
         let resource = Resource<[Joke]>(request: request) { json in
@@ -57,8 +57,8 @@ public class MixInICNDBService: ICNDBService {
             completion(texts)
         }
     }
-    
-    public func getJokeCategories(completion: @escaping ([String]) -> ()) {
+
+    public func getJokeCategories(completion: @escaping ([String]) -> Void) {
         let url = networkService.baseURL.appendingPathComponent("categories")
         let request = Request(url: url)
         let resource = Resource<[String]>(request: request) { json in
