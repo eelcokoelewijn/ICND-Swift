@@ -15,8 +15,8 @@ icndbService.getRandomJoke(substituteFirstname: "Henk", substituteLastname: "Spe
     print("\($0)\n")
 }
 
-icndbService.getJokeCategories { c in
-    c.forEach {
+icndbService.getJokeCategories { categories in
+    categories.forEach {
         print("\($0)\n")
     }
 }

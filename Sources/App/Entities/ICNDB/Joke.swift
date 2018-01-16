@@ -1,25 +1,37 @@
 import Foundation
 import NetworkKit
 
-public struct Joke {
+public struct Joke: Codable {
     let identifier: Int
-    let description: String
+    let joke: String
+    let type: String
 }
 
-// MARK: Parse json response to Joke struct
-
 extension Joke {
-    public init(json: JSONDictionary) throws {
-        guard let identifier = json["id"] as? Int else {
-            throw SerializationError.missing("id")
-        }
+    enum CodingKeys: String, CodingKey {
+        case type
+        case value
+    }
 
-        guard let description = json["joke"] as? String else {
-            throw SerializationError.missing("joke")
-        }
+    enum JokeCodingKeys: String, CodingKey {
+        case identifier = "id"
+        case joke
+    }
 
-        self.identifier = identifier
-        self.description = description
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        type = try values.decode(String.self, forKey: .type)
+        let jokeContainer = try values.nestedContainer(keyedBy: JokeCodingKeys.self, forKey: .value)
+        identifier = try jokeContainer.decode(Int.self, forKey: .identifier)
+        joke = try jokeContainer.decode(String.self, forKey: .joke)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(type, forKey: .type)
+        var jokeContainer = container.nestedContainer(keyedBy: JokeCodingKeys.self, forKey: .value)
+        try jokeContainer.encode(identifier, forKey: .identifier)
+        try jokeContainer.encode(joke, forKey: .joke)
     }
 }
 
@@ -28,10 +40,8 @@ extension Joke {
 extension Joke {
     public static func resource() -> Resource<Joke> {
         let request = Request(url: URL(string: "https://api.icndb.com/jokes/random")!)
-        return Resource<Joke>(request: request) { json in
-            guard let dic = json as? JSONDictionary else { return nil }
-            guard let jokeJSON = dic["value"] as? JSONDictionary else { return nil }
-            return try? Joke.init(json: jokeJSON)
+        return Resource<Joke>(request: request) { data in
+            return try? JSONDecoder().decode(Joke.self, from: data)
         }
     }
 }
