@@ -1,7 +1,7 @@
 import Foundation
 import NetworkKit
 
-public struct Joke: Codable {
+public struct Joke: Codable, Equatable {
     let identifier: Int
     let joke: String
     let type: String
@@ -39,7 +39,7 @@ extension Joke {
 
 extension Joke {
     public static func resource() -> Resource<Joke> {
-        let request = Request(url: URL(string: "https://api.icndb.com/jokes/random")!)
+        let request = RequestBuilder(url: URL(string: "https://api.icndb.com/jokes/random")!).build()
         return Resource<Joke>(request: request) { data in
             return try? JSONDecoder().decode(Joke.self, from: data)
         }

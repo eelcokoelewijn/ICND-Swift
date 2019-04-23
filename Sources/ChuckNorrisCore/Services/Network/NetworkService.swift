@@ -4,7 +4,7 @@ import NetworkKit
 public protocol NetworkService {
     var baseURL: URL { get }
     func load<ResourceType>(resource: Resource<ResourceType>,
-                            completion: @escaping (Result<ResourceType>) -> Void)
+                            completion: @escaping (Result<ResourceType, NetworkError>) -> Void)
 }
 
 public protocol UsesNetworkService {
@@ -21,7 +21,7 @@ public class MixInNetworkService: NetworkService {
     }
 
     public func load<ResourceType>(resource: Resource<ResourceType>,
-                                   completion: @escaping (Result<ResourceType>) -> Void) {
+                                   completion: @escaping (Result<ResourceType, NetworkError>) -> Void) {
         networkKit.load(resource: resource, completion: completion)
     }
 }

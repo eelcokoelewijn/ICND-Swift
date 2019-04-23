@@ -1,6 +1,6 @@
 import NetworkKit
 import Foundation
-import App
+import ChuckNorrisCore
 
 // https://api.icndb.com/jokes/random
 
