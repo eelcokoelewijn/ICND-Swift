@@ -1,5 +1,3 @@
 .DS_Store
-/.build
-/Packages
-
-*.xcuserstate
+.build
+*.xcodeproj

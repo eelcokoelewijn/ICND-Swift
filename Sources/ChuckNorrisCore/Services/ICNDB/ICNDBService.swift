@@ -29,7 +29,7 @@ public class MixInICNDBService: ICNDBService {
             params["firstName"] = firstName
             params["lastName"] = lastName
         }
-        let request = Request(url: url, params: params)
+        let request = RequestBuilder(url: url).parameters(params).build()
         let resource = Resource<Joke>(request: request, parseResponse: { data in
             return try? JSONDecoder().decode(Joke.self, from: data)
         })
@@ -41,7 +41,7 @@ public class MixInICNDBService: ICNDBService {
 
     public func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> Void) {
         let url = networkService.baseURL.appendingPathComponent("jokes/random/\(number)")
-        let request = Request(url: url)
+        let request = RequestBuilder(url: url).build()
         let resource = Resource<[Joke]>(request: request) { data in
             return try? JSONDecoder().decode([Joke].self, from: data)
         }
@@ -54,13 +54,13 @@ public class MixInICNDBService: ICNDBService {
 
     public func getJokeCategories(completion: @escaping ([String]) -> Void) {
         let url = networkService.baseURL.appendingPathComponent("categories")
-        let request = Request(url: url)
-        let resource = Resource<[String]>(request: request) { data in
-            return try? JSONDecoder().decode([String].self, from: data)
+        let request = RequestBuilder(url: url).build()
+        let resource = Resource<Category>(request: request) { data in
+            return try? JSONDecoder().decode(Category.self, from: data)
         }
         networkService.load(resource: resource) { result in
-            guard case let .success(categories) = result else { return }
-            completion(categories)
+            guard case let .success(category) = result else { return }
+            completion(category.names)
         }
     }
 }
