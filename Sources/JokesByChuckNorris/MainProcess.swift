@@ -11,7 +11,7 @@ import ChuckNorrisCore
 enum ChuckCommand: String {
     case help
     case random
-    case nameSubstitued
+    case name
     case categories
 }
 
@@ -41,9 +41,10 @@ class MainProcess {
                 }
                 self?.commandCompleted(withExitCode: 0)
             }
-        case .nameSubstitued:
+        case .name:
             guard arguments.count > 3 else {
                 shouldExit = true
+                printHelp()
                 commandCompleted(withExitCode: 2)
                 return
             }
@@ -57,13 +58,7 @@ class MainProcess {
         case .help:
             fallthrough
         @unknown default:
-            print("""
-                - random: one random chuck norris joke
-                - categories: list all chuck norris categories
-                - nameSubstitued: one random joke, takes two arguments firstname and lastname.
-                                  jokes nameSubstitued Hank Long
-                - help: shows this help message
-                """)
+            printHelp()
             commandCompleted(withExitCode: 0)
         }
     }
@@ -78,5 +73,15 @@ class MainProcess {
             self?.shouldExit = true
             self?.exitCode = 0
         }
+    }
+
+    private func printHelp() {
+        print("""
+        - random: one random chuck norris joke
+        - categories: list all chuck norris categories
+        - name: one random joke, takes two arguments firstname and lastname.
+                          jokes name John Doe
+        - help: shows this help message
+        """)
     }
 }

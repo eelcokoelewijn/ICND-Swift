@@ -14,14 +14,6 @@ extension Category {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         names = try values.decode([String].self, forKey: .names)
     }
-//
-//    public func encode(to encoder: Encoder) throws {
-//        var container = encoder.container(keyedBy: CodingKeys.self)
-//        try container.encode(type, forKey: .type)
-//        var jokeContainer = container.nestedContainer(keyedBy: JokeCodingKeys.self, forKey: .value)
-//        try jokeContainer.encode(identifier, forKey: .identifier)
-//        try jokeContainer.encode(joke, forKey: .joke)
-//    }
 }
 
 // MARK: Resource for Joke
