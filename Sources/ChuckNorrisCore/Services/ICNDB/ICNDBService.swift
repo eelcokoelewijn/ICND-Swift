@@ -4,9 +4,9 @@ import NetworkKit
 public protocol ICNDBService: UsesNetworkService {
     func getRandomJoke(substituteFirstname firstName: String?,
                        substituteLastname lastName: String?,
-                       completion: @escaping (String) -> Void)
-    func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> Void)
-    func getJokeCategories(completion: @escaping ([String]) -> Void)
+                       numberOfJokes number: Int,
+                       completion: @escaping ([String]) throws -> Void)
+    func getJokeCategories(completion: @escaping ([String]) throws -> Void)
 }
 
 public protocol UsesICNDBService {
@@ -22,45 +22,44 @@ public class MixInICNDBService: ICNDBService {
 
     public func getRandomJoke(substituteFirstname firstName: String? = nil,
                               substituteLastname lastName: String? = nil,
-                              completion: @escaping ((String) -> Void) ) {
-        let url = networkService.baseURL.appendingPathComponent("jokes/random")
+                              numberOfJokes number: Int = 1,
+                              completion: @escaping ([String])  throws -> Void) {
+        let url = networkService.baseURL.appendingPathComponent("jokes/random/\(number)")
         var params: [String: String] = [:]
         if let firstName = firstName, let lastName = lastName {
             params["firstName"] = firstName
             params["lastName"] = lastName
         }
         let request = RequestBuilder(url: url).parameters(params).build()
-        let resource = Resource<Joke>(request: request, parseResponse: { data in
-            return try? JSONDecoder().decode(Joke.self, from: data)
+        let resource = Resource<Jokes>(request: request, parseResponse: { data in
+            return try? JSONDecoder().decode(Jokes.self, from: data)
         })
+        let semaphore = DispatchSemaphore(value: 0)
         networkService.load(resource: resource) { result in
-            guard case let .success(randomJoke) = result else { return }
-            completion(randomJoke.joke.htmlDecode())
-        }
-    }
-
-    public func getRandom(numberOfJokes number: Int, completion: @escaping ([String]) -> Void) {
-        let url = networkService.baseURL.appendingPathComponent("jokes/random/\(number)")
-        let request = RequestBuilder(url: url).build()
-        let resource = Resource<[Joke]>(request: request) { data in
-            return try? JSONDecoder().decode([Joke].self, from: data)
-        }
-        networkService.load(resource: resource) { result in
+            defer {
+                semaphore.signal()
+            }
             guard case let .success(jokes) = result else { return }
-            let texts: [String] = jokes.map { randomJokes in randomJokes.joke.htmlDecode() }
-            completion(texts)
+            let texts: [String] = jokes.value.map { randomJokes in randomJokes.joke.htmlDecode() }
+            try? completion(texts)
         }
+        semaphore.wait()
     }
 
-    public func getJokeCategories(completion: @escaping ([String]) -> Void) {
+    public func getJokeCategories(completion: @escaping ([String]) throws -> Void) {
         let url = networkService.baseURL.appendingPathComponent("categories")
         let request = RequestBuilder(url: url).build()
         let resource = Resource<Category>(request: request) { data in
             return try? JSONDecoder().decode(Category.self, from: data)
         }
+        let semaphore = DispatchSemaphore(value: 0)
         networkService.load(resource: resource) { result in
+            defer {
+                semaphore.signal()
+            }
             guard case let .success(category) = result else { return }
-            completion(category.names)
+            try? completion(category.names)
         }
+        semaphore.wait()
     }
 }

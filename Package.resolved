@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/eelcokoelewijn/NetworkKit",
         "state": {
           "branch": null,
-          "revision": "c20dfdbc8de734826832e77142c0a5589de95fcf",
-          "version": "1.2.0"
+          "revision": "94e3c139ab1fcbb1a65d29abf632a5c2473c5894",
+          "version": "1.2.1"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "15351c1cd009eba0b6e438bfef55ea9847a8dc4a",
+          "version": "0.3.0"
         }
       }
     ]
