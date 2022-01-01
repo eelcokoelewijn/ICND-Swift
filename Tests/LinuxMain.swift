@@ -1,7 +1,7 @@
 import XCTest
 
-import JokesByChuckNorrisTests
+import ICNDBTests
 
 var tests = [XCTestCaseEntry]()
-tests += JokesByChuckNorrisTests.allTests()
+tests += ICNDBTests.allTests()
 XCTMain(tests)

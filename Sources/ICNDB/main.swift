@@ -1,7 +1,7 @@
 import NetworkKit
 import Foundation
 import ArgumentParser
-import ChuckNorrisCore
+import ICNDBCore
 
 // https://api.icndb.com/jokes/random
 
