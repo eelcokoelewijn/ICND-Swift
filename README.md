@@ -19,4 +19,4 @@ Internet Chuck Norris Database
     random (default)        Random Chuck Norris joke(s).
     categories              ICNDB categories
 
-See 'icndb help <subcommand>' for detailed help.
+See `icndb help <subcommand>` for detailed help.
