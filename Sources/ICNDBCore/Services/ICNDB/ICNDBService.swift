@@ -2,11 +2,19 @@ import Foundation
 import NetworkKit
 
 public protocol ICNDBService: UsesNetworkService {
-    func getRandomJoke(substituteFirstname firstName: String?,
-                       substituteLastname lastName: String?,
-                       numberOfJokes number: Int,
-                       completion: @escaping ([String]) throws -> Void)
+    func getRandomJoke(
+        substituteFirstname firstName: String?,
+        substituteLastname lastName: String?,
+        numberOfJokes number: Int,
+        completion: @escaping ([String]) throws -> Void
+    )
+    func getRandomJoke(
+        substituteFirstname firstName: String?, 
+        substituteLastname lastName: String?, 
+        numberOfJokes number: Int
+    ) async throws -> [String]
     func getJokeCategories(completion: @escaping ([String]) throws -> Void)
+    func getJokeCategories() async throws -> [String]
 }
 
 public protocol UsesICNDBService {
@@ -46,6 +54,25 @@ public class MixInICNDBService: ICNDBService {
         semaphore.wait()
     }
 
+    public func getRandomJoke(
+        substituteFirstname firstName: String? = nil, 
+        substituteLastname lastName: String? = nil, 
+        numberOfJokes number: Int = 1
+    ) async throws -> [String] {
+        let url = networkService.baseURL.appendingPathComponent("jokes/random/\(number)")
+        var params: [String: String] = [:]
+        if let firstName = firstName, let lastName = lastName {
+            params["firstName"] = firstName
+            params["lastName"] = lastName
+        }
+        let request = RequestBuilder(url: url).parameters(params).build()
+        let resource = Resource<Jokes>(request: request, parseResponse: { data in
+            return try? JSONDecoder().decode(Jokes.self, from: data)
+        })
+        let jokes = try await networkService.load(resource: resource)
+        return jokes.value.map { randomJokes in randomJokes.joke.htmlDecode() }
+    }
+
     public func getJokeCategories(completion: @escaping ([String]) throws -> Void) {
         let url = networkService.baseURL.appendingPathComponent("categories")
         let request = RequestBuilder(url: url).build()
@@ -61,5 +88,15 @@ public class MixInICNDBService: ICNDBService {
             try? completion(category.names)
         }
         semaphore.wait()
+    }
+
+    public func getJokeCategories() async throws -> [String] {
+        let url = networkService.baseURL.appendingPathComponent("categories")
+        let request = RequestBuilder(url: url).build()
+        let resource = Resource<Category>(request: request) { data in
+            return try? JSONDecoder().decode(Category.self, from: data)
+        }
+        let category = try await networkService.load(resource: resource)
+        return category.names
     }
 }
