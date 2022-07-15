@@ -9,8 +9,8 @@ public protocol ICNDBService: UsesNetworkService {
         completion: @escaping ([String]) throws -> Void
     )
     func getRandomJoke(
-        substituteFirstname firstName: String?, 
-        substituteLastname lastName: String?, 
+        substituteFirstname firstName: String?,
+        substituteLastname lastName: String?,
         numberOfJokes number: Int
     ) async throws -> [String]
     func getJokeCategories(completion: @escaping ([String]) throws -> Void)
@@ -25,13 +25,15 @@ public class MixInICNDBService: ICNDBService {
     public let networkService: NetworkService
 
     public init() {
-        networkService = MixInNetworkService()
+        self.networkService = MixInNetworkService()
     }
 
-    public func getRandomJoke(substituteFirstname firstName: String? = nil,
-                              substituteLastname lastName: String? = nil,
-                              numberOfJokes number: Int = 1,
-                              completion: @escaping ([String])  throws -> Void) {
+    public func getRandomJoke(
+        substituteFirstname firstName: String? = nil,
+        substituteLastname lastName: String? = nil,
+        numberOfJokes number: Int = 1,
+        completion: @escaping ([String]) throws -> Void
+    ) {
         let resource = getRandomJokeResource(firstName: firstName, lastName: lastName, numberOfJokes: number)
         let semaphore = DispatchSemaphore(value: 0)
         networkService.load(resource: resource) { result in
@@ -46,8 +48,8 @@ public class MixInICNDBService: ICNDBService {
     }
 
     public func getRandomJoke(
-        substituteFirstname firstName: String? = nil, 
-        substituteLastname lastName: String? = nil, 
+        substituteFirstname firstName: String? = nil,
+        substituteLastname lastName: String? = nil,
         numberOfJokes number: Int = 1
     ) async throws -> [String] {
         let resource = getRandomJokeResource(firstName: firstName, lastName: lastName, numberOfJokes: number)
@@ -83,7 +85,7 @@ public class MixInICNDBService: ICNDBService {
         }
         let request = RequestBuilder(url: url).parameters(params).build()
         let resource = Resource<Jokes>(request: request, parseResponse: { data in
-            return try? JSONDecoder().decode(Jokes.self, from: data)
+            try? JSONDecoder().decode(Jokes.self, from: data)
         })
         return resource
     }
@@ -92,7 +94,7 @@ public class MixInICNDBService: ICNDBService {
         let url = networkService.baseURL.appendingPathComponent("categories")
         let request = RequestBuilder(url: url).build()
         let resource = Resource<Category>(request: request) { data in
-            return try? JSONDecoder().decode(Category.self, from: data)
+            try? JSONDecoder().decode(Category.self, from: data)
         }
         return resource
     }

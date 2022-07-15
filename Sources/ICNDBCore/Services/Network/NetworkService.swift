@@ -16,8 +16,8 @@ public class MixInNetworkService: NetworkService {
     private let networkKit: NetworkKit
 
     public init() {
-        baseURL = URL(string: "http://api.icndb.com/")!
-        networkKit = NetworkKit()
+        self.baseURL = URL(string: "http://api.icndb.com/")!
+        self.networkKit = NetworkKit()
     }
 
     public func load<ResourceType>(resource: Resource<ResourceType>, completion: @escaping (Result<ResourceType, NetworkError>) -> Void) {

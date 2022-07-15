@@ -22,11 +22,11 @@ extension Joke {
 
 // MARK: Resource for Joke
 
-extension Jokes {
-    public static func resource() -> Resource<Jokes> {
+public extension Jokes {
+    static func resource() -> Resource<Jokes> {
         let request = RequestBuilder(url: URL(string: "https://api.icndb.com/jokes/random/1")!).build()
         return Resource<Jokes>(request: request) { data in
-            return try? JSONDecoder().decode(Jokes.self, from: data)
+            try? JSONDecoder().decode(Jokes.self, from: data)
         }
     }
 }

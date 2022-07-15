@@ -13,11 +13,11 @@ extension Category {
 
 // MARK: Resource for Joke
 
-extension Category {
-    public static func resource() -> Resource<Category> {
+public extension Category {
+    static func resource() -> Resource<Category> {
         let request = RequestBuilder(url: URL(string: "https://api.icndb.com/categories")!).build()
         return Resource<Category>(request: request) { data in
-            return try? JSONDecoder().decode(Category.self, from: data)
+            try? JSONDecoder().decode(Category.self, from: data)
         }
     }
 }
