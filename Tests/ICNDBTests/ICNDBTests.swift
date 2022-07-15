@@ -11,11 +11,4 @@ final class ICNDBTests: XCTestCase {
         let result = subject.htmlDecode()
         XCTAssertEqual(result, "This & that!", "Html encode &amp; to & in \(result)")
     }
-
-    static var allTests = [
-        (
-            "testICNDBURL", testICNDBURL,
-            "testHtmlDecode", testHtmlDecode
-        )
-    ]
 }
