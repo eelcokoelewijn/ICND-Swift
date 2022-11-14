@@ -4,7 +4,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug icndb",
-            "program": ".build/debug/icndb",
+            "program": "${workspaceFolder:ICNDB-Swift}/.build/debug/icndb",
             "args": [],
             "cwd": "${workspaceFolder:ICNDB-Swift}",
             "preLaunchTask": "swift: Build Debug icndb"
@@ -13,7 +13,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Release icndb",
-            "program": ".build/release/icndb",
+            "program": "${workspaceFolder:ICNDB-Swift}/.build/release/icndb",
             "args": [],
             "cwd": "${workspaceFolder:ICNDB-Swift}",
             "preLaunchTask": "swift: Build Release icndb"
