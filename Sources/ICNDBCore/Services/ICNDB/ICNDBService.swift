@@ -2,18 +2,22 @@ import Foundation
 import NetworkKit
 
 public protocol ICNDBService: UsesNetworkService {
+    @available(macOS 10.15, *)
     func getRandomJoke(
         substituteFirstname firstName: String?,
         substituteLastname lastName: String?,
         numberOfJokes number: Int,
         completion: @escaping ([String]) throws -> Void
     )
+    @available(macOS 10.15, *)
     func getRandomJoke(
         substituteFirstname firstName: String?,
         substituteLastname lastName: String?,
         numberOfJokes number: Int
     ) async throws -> [String]
+    @available(macOS 10.15, *)
     func getJokeCategories(completion: @escaping ([String]) throws -> Void)
+    @available(macOS 10.15, *)
     func getJokeCategories() async throws -> [String]
 }
 
@@ -28,6 +32,7 @@ public class MixInICNDBService: ICNDBService {
         self.networkService = MixInNetworkService()
     }
 
+    @available(macOS 10.15, *)
     public func getRandomJoke(
         substituteFirstname firstName: String? = nil,
         substituteLastname lastName: String? = nil,
@@ -47,6 +52,7 @@ public class MixInICNDBService: ICNDBService {
         semaphore.wait()
     }
 
+    @available(macOS 10.15, *)
     public func getRandomJoke(
         substituteFirstname firstName: String? = nil,
         substituteLastname lastName: String? = nil,
@@ -57,6 +63,7 @@ public class MixInICNDBService: ICNDBService {
         return jokes.value.map { randomJokes in randomJokes.joke.htmlDecode() }
     }
 
+    @available(macOS 10.15, *)
     public func getJokeCategories(completion: @escaping ([String]) throws -> Void) {
         let resource = getCategoriesResource()
         let semaphore = DispatchSemaphore(value: 0)
@@ -69,7 +76,8 @@ public class MixInICNDBService: ICNDBService {
         }
         semaphore.wait()
     }
-
+    
+    @available(macOS 10.15, *)
     public func getJokeCategories() async throws -> [String] {
         let resource = getCategoriesResource()
         let category = try await networkService.load(resource: resource)

@@ -3,7 +3,9 @@ import NetworkKit
 
 public protocol NetworkService {
     var baseURL: URL { get }
+    @available(macOS 10.15, *)
     func load<ResourceType>(resource: Resource<ResourceType>, completion: @escaping (Result<ResourceType, NetworkError>) -> Void)
+    @available(macOS 10.15, *)
     func load<ResourceType>(resource: Resource<ResourceType>) async throws -> ResourceType
 }
 
@@ -20,10 +22,12 @@ public class MixInNetworkService: NetworkService {
         self.networkKit = NetworkKit()
     }
 
+    @available(macOS 10.15, *)
     public func load<ResourceType>(resource: Resource<ResourceType>, completion: @escaping (Result<ResourceType, NetworkError>) -> Void) {
         networkKit.load(resource: resource, completion: completion)
     }
 
+    @available(macOS 10.15, *)
     public func load<ResourceType>(resource: Resource<ResourceType>) async throws -> ResourceType {
         try await networkKit.load(resource: resource)
     }

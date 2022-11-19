@@ -5,6 +5,7 @@ import NetworkKit
 
 // https://api.icndb.com/jokes/random
 
+@available(macOS 10.15, *)
 extension ICNDB {
     struct Random: AsyncParsableCommand {
         static var configuration = CommandConfiguration(abstract: "Random Chuck Norris joke(s).")
@@ -38,6 +39,7 @@ extension ICNDB {
 }
 
 @main
+@available(macOS 10.15, *)
 struct ICNDB: AsyncParsableCommand {
     static var configuration = CommandConfiguration(
         abstract: "Internet Chuck Norris Database",
